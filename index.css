@@ -1,0 +1,603 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 25px;
+    color: #fbf7f7;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #f8f3f3;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    width: 40%;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    width: 120%;
+}
+
+/* Right Section (Login/Signup, Dropdown) */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dropbtn {
+    background-color: #282c34;
+    color: #faf8f8;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.login,
+.signup {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f5f1f1;
+}
+
+.login:hover,
+.signup:hover {
+    text-decoration: underline;
+}
+
+/* Scrollable Section */
+.scroll {
+    background-color: #444;
+    height: 225px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    animation: scroll 50s linear infinite;
+}
+
+.scroll img {
+    height: 200px;
+    margin-right: 10px;
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.scroll img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* New Releases Section */
+.new-releases {
+    background-color: #1b1b1b;
+    color: white;
+    padding: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.section-header .more {
+    color: #ff5e5e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.section-header .more:hover {
+    text-decoration: underline;
+}
+
+.release-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.release-item {
+    width: 150px;
+    text-align: center;
+}
+
+.release-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.release-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.release-item img:hover {
+    transform: scale(1.05);
+}
+
+.release-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.release-list::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #282c34;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #d1d1d1;
+}
+
+.social-icons i {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+/* Player Controls */
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 300px;
+    max-height: 400px;
+    transition: width 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+.player-controls:hover {
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Toggle visibility for dropdown-like effect */
+.player-controls.hidden {
+    width: 50px;
+    padding: 10px;
+}
+
+.player-controls.hidden .song-info,
+.player-controls.hidden .progress-container,
+.player-controls.hidden .control-buttons,
+.player-controls.hidden .volume-controls {
+    display: none;
+}
+
+/* Song Info */
+.song-info {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#song-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Progress Container */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.progress-container span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 4px;
+    background: #666;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background: #666;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px;
+    transition: all 0.2s ease;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+    background: #e03c3c;
+    transform: scale(1.2);
+}
+
+/* Control Buttons */
+.control-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    color: #ff4d4d;
+    transform: scale(1.1);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.control-btn i {
+    font-size: 18px;
+}
+
+/* Volume Controls */
+.volume-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.volume-bar {
+    width: 100px;
+    height: 4px;
+    background: #666;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.volume-bar::-webkit-slider-runnable-track {
+    background: #666;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px;
+    transition: all 0.2s ease;
+}
+
+.volume-bar::-webkit-slider-thumb:hover {
+    background: #e03c3c;
+    transform: scale(1.2);
+}
+
+/* Menu Button (Toggle) */
+#menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001; /* Ensure the button is clickable when player is closed */
+}
+
+/* Media Queries */
+
+/* Mobile phones (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 85%;
+    }
+
+    .player-controls {
+        width: 200px;
+        max-height: 300px;
+        top: 40%;
+    }
+
+    .player-controls.hidden {
+        width: 40px;
+    }
+
+    .control-btn {
+        font-size: 16px;
+    }
+
+    .progress-container {
+        margin-bottom: 5px;
+    }
+
+    .volume-bar {
+        width: 60px;
+    }
+
+    .release-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .release-item {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 45px;
+    }
+
+    .nav-links a {
+        margin: 5px 10px;
+        font-size: 15px;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .player-controls {
+        width: 250px;
+        max-height: 350px;
+    }
+
+    .release-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .release-item {
+        width: 45%;
+    }
+}
+
+/* Desktops (min-width: 769px) */
+@media only screen and (min-width: 769px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 50px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .search-bar {
+        width: 40%;
+    }
+
+    .search-bar input {
+        width: 120%;
+    }
+
+    .player-controls {
+        width: 300px;
+    }
+
+    .release-item {
+        width: 150px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
